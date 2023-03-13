@@ -21,17 +21,17 @@
   color: #ffffff;
 }
 
-.fizz {
+.bg-fizz {
   background-color: red;
   color: white;
 }
 
-.buzz {
+.bg-buzz {
   background-color: yellow;
   color: black;
 }
 
-.fizzbuzz {
+.bg-fizzbuzz {
   background-color: orange;
   color: lightyellow;
 }

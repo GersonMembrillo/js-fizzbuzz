@@ -13,26 +13,34 @@ const numBoxes = 100;
 */
 
 const boardbox = document.getElementById('boardbox');
+let content = '';
 
 for (let i = 1; i <= numBoxes; i++) {
 	let boxColor = '';
 
 	if (i % 3 === 0 && i % 5 === 0) {
-		boxColor = 'fizzbuzz';
+		boxColor = 'bg-fizzbuzz';
+		content = 'FizzBuzz';
 	} else if (i % 5 === 0) {
-		boxColor = 'buzz';
+		boxColor = 'bg-buzz';
+		content = 'Buzz';
 	} else if (i % 3 === 0) {
-		boxColor = 'fizz';
+		boxColor = 'bg-fizz';
+		content = 'Fizz';
+	} else {
+		content = i;
 	}
+
+	console.log(content);
 
 	boardbox.innerHTML += `<div class="box">
 	<div id="content" class="boxcontent d-flex justify-content-center align-items-center ${boxColor}">
-    ${i}
+    ${content}
   </div>
 </div>`;
 }
 
-// LO DO PER FATTO A METÀ, IL CODICE SOTTO FUNZIONA MA HA TROPPA ROBA, VOLEVO RIDURLA MA NON RIESCO A CAMBIARE IL VALORE DELLA I SENZA FAR SPARIRE TUTTO,
+// VERSIONE ALTERNATIVA (AGGIUSTATA QUELLA INIZIALE EHEHEHEHEHE)
 
 /*
 for (let i = 1; i <= numBoxes; i++) {
