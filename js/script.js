@@ -12,7 +12,7 @@ const numBoxes = 100;
 </div>`
 */
 
-const boardbox = document.getElementById('boardbox');
+const boardBox = document.getElementById('board-box');
 let content = '';
 
 for (let i = 1; i <= numBoxes; i++) {
@@ -33,8 +33,8 @@ for (let i = 1; i <= numBoxes; i++) {
 
 	console.log(content);
 
-	boardbox.innerHTML += `<div class="box">
-	<div id="content" class="boxcontent d-flex justify-content-center align-items-center ${boxColor}">
+	boardBox.innerHTML += `<div class="box">
+	<div id="content" class="box-content d-flex justify-content-center align-items-center ${boxColor}">
     ${content}
   </div>
 </div>`;

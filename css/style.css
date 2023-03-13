@@ -2,7 +2,7 @@
   height: 100vh;
 }
 
-#boardbox {
+#board-box {
   width: 800px;
   height: 800px;
   background-color: ;
@@ -14,7 +14,7 @@
   padding: 8px;
 }
 
-.boxcontent{
+.box-content{
   width: 100%;
   height: 100%;
   background-color: darkgray;
