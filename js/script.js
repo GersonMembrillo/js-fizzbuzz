@@ -13,7 +13,10 @@ const numBoxes = 100;
 */
 
 const boardBox = document.getElementById('board-box');
+// content è il contenuto interno del box singolo da modificare
 let content = '';
+// innerBox conterrà i div dell'html mancanti
+let innerBox = '';
 
 for (let i = 1; i <= numBoxes; i++) {
 	let boxColor = '';
@@ -33,14 +36,22 @@ for (let i = 1; i <= numBoxes; i++) {
 
 	console.log(content);
 
-	boardBox.innerHTML += `<div class="box">
+	//SCRIVERE L'HTML FUORI COSÍ IN CASO DI MODIFICHE SI PUÒ FARE PRIMA (IN QUESTO CASO NEL FOR)
+
+	const tp1 = `<div class="box">
 	<div id="content" class="box-content d-flex justify-content-center align-items-center ${boxColor}">
     ${content}
   </div>
 </div>`;
+
+	// inserisco la const nel contenitore del html mancante
+	innerBox += tp1;
 }
 
-// VERSIONE ALTERNATIVA (AGGIUSTATA QUELLA INIZIALE EHEHEHEHEHE)
+// con innerHTML aggiungo innerbox al div html board-box (preso con boardBox)
+boardBox.innerHTML = innerBox;
+
+/* Alternativo */
 
 /*
 for (let i = 1; i <= numBoxes; i++) {
